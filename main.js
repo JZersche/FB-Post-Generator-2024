@@ -274,7 +274,7 @@ console.log(_Post.scrollHeight);
 		console.log(_Post.value);
 console.log(_Post.scrollHeight);
 _Post.style.height = 0;
-_Post.style.height = (_Post.scrollHeight-17) + 'px';
+_Post.style.height = (_Post.scrollHeight+17) + 'px';
 
   });
 
