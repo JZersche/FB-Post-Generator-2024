@@ -264,7 +264,7 @@ _Post_Image1.appendChild(IMAGE);
 
 document.body.appendChild(_Wrapper);
 
-_Post.style.height = (_Post.scrollHeight-100) + 'px';
+_Post.style.height = (_Post.scrollHeight-17) + 'px';
 console.log(_Post.scrollHeight);
 
   // Add an event listener to the textarea for input
@@ -274,7 +274,7 @@ console.log(_Post.scrollHeight);
 		console.log(_Post.value);
 console.log(_Post.scrollHeight);
 _Post.style.height = 0;
-_Post.style.height = (_Post.scrollHeight-100) + 'px';
+_Post.style.height = (_Post.scrollHeight-17) + 'px';
 
   });
 
@@ -300,10 +300,10 @@ const ctx = canvas.getContext("2d");
 
 let canvasWidth = document.body.lastChild.getBoundingClientRect().width;
 //let canvasHeight = document.body.lastChild.getBoundingClientRect().height;
-let canvasHeight = document.querySelector('._Wrapper').offsetHeight + 50;
+let canvasHeight = document.querySelector('._Wrapper').offsetHeight - parseInt(ExportPNGButton.style.height);
 console.log('CHeight: '+document.querySelector('._Wrapper').offsetHeight);
 canvasWidth = canvasWidth;
-canvasHeight = canvasHeight + 142; // Adjust this MF
+canvasHeight = canvasHeight + 42; // Adjust this MF
 
 canvas.height = canvasHeight;
 canvas.width = canvasWidth; // Set the canvas width to match the desired element width
