@@ -303,7 +303,7 @@ let canvasWidth = document.body.lastChild.getBoundingClientRect().width;
 let canvasHeight = document.querySelector('._Wrapper').offsetHeight + 50;
 console.log('CHeight: '+document.querySelector('._Wrapper').offsetHeight);
 canvasWidth = canvasWidth;
-canvasHeight = canvasHeight + 42; // Adjust this MF
+canvasHeight = canvasHeight + 142; // Adjust this MF
 
 canvas.height = canvasHeight;
 canvas.width = canvasWidth; // Set the canvas width to match the desired element width
