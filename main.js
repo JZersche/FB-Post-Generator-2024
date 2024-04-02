@@ -300,7 +300,7 @@ const ctx = canvas.getContext("2d");
 
 let canvasWidth = document.body.lastChild.getBoundingClientRect().width;
 //let canvasHeight = document.body.lastChild.getBoundingClientRect().height;
-let canvasHeight = document.querySelector('._Wrapper').offsetHeight - parseInt(ExportPNGButton.style.height);
+let canvasHeight = document.querySelector('._Wrapper').offsetHeight + 50;
 console.log('CHeight: '+document.querySelector('._Wrapper').offsetHeight);
 canvasWidth = canvasWidth;
 canvasHeight = canvasHeight + 42; // Adjust this MF
