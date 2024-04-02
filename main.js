@@ -274,7 +274,7 @@ console.log(_Post.scrollHeight);
 		console.log(_Post.value);
 console.log(_Post.scrollHeight);
 _Post.style.height = 0;
-_Post.style.height = (_Post.scrollHeight+17) + 'px';
+_Post.style.height = (_Post.scrollHeight-17) + 'px';
 
   });
 
@@ -371,7 +371,7 @@ _Wrapper.parentNode.insertBefore(ExportPNGButton, _Wrapper.nextSibling);
 
 canvas.height = canvasHeight - 5;
 console.log("HEIGHT IS "+_Wrapper.offsetHeight);
-_Wrapper.style.height = _Wrapper.offsetHeight - 2.5 + "px";
+_Wrapper.style.height = _Post.offsetHeight - 2.5 + 100 + "px";
 ForeignObject_Wrapper.style.height = _Wrapper.style.height;
 //ForeignObject_Wrapper.setAttribute("style", "background-color: #2A5773; background-image: url('https://i.imgur.com/CnbEeEv.png'); background-size: 64px; background-repeat: repeat;");
 
