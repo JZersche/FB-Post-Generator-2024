@@ -264,7 +264,7 @@ _Post_Image1.appendChild(IMAGE);
 
 document.body.appendChild(_Wrapper);
 
-_Post.style.height = (_Post.scrollHeight-0) + 'px';
+_Post.style.height = (_Post.scrollHeight+50) + 'px';
 console.log(_Post.scrollHeight);
 
   // Add an event listener to the textarea for input
@@ -274,7 +274,7 @@ console.log(_Post.scrollHeight);
 		console.log(_Post.value);
 console.log(_Post.scrollHeight);
 _Post.style.height = 0;
-_Post.style.height = (_Post.scrollHeight-0) + 'px';
+_Post.style.height = (_Post.scrollHeight+50) + 'px';
 
   });
 
