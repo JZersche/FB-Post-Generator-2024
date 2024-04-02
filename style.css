@@ -1,0 +1,164 @@
+@import url('https://fonts.cdnfonts.com/css/uni-sans-regular');
+
+:root {
+  --post-text-color: #fff; 
+}
+
+
+body {
+  height: 10px;
+  display: block;
+  background: #222;
+}
+
+.title_container {
+  width: auto;
+  background: #0000;
+}
+
+h1.title {
+  margin-top: 2vh;
+  margin-bottom: 4vh;
+  position: relative;
+  display: block;
+  background: #0a6;
+  width: 320px;
+  margin-left: auto;
+  margin-right: 25px;
+  font-family: "Segoe UI";
+  font-size: 1.1em;
+  font-weight: 400;
+  letter-spacing: -1px;
+  color: white;
+  border-radius: 8px;
+  padding: 5px;
+}
+
+p {
+  margin: 0;
+  color: white;
+}
+
+
+._Wrapper {
+  background-color: #000;
+  border-radius: 0px;
+  border: 1px solid #f00;
+  width: 600px;
+height: auto;
+}
+
+._PostHeader {
+  position: relative;
+  display: flex;
+  width: 400px;
+  align-items: center;
+  border-radius: 2px;
+  background-color: transparent;
+  color: #fff;
+  border: 0px solid #f99;
+  border-bottom: 0;
+}
+
+._PostHeaderData {
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 12px;
+  background: #000!important;
+  line-height: 1;
+}
+
+
+._PostHeaderData_Logo {
+  position: relative;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+._PostHeaderLogoImageSRC {
+  border-radius: 50px;
+  position: relative;
+  top: 4px;
+  left: 4px;
+};
+
+
+
+
+._PostHeaderData_Username {
+  cursor: pointer;
+  direction: ltr;
+  /*font-family: 'Uni Sans Demo', sans-serif;*/
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 18.6667px;
+  list-style-image: none;
+  list-style-position: outside;
+  list-style-type: none;
+  overflow-wrap: break-word;
+  text-align: left;
+  word-break: break-word;
+  color: rgb(228, 230, 235);
+}
+
+._PostHeaderData_Timestamp {
+  cursor: pointer;
+  direction: ltr;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14.7667px;
+  list-style-image: none;
+  list-style-position: outside;
+  list-style-type: none;
+  overflow-wrap: break-word;
+  text-align: left;
+  word-break: break-word;
+  color: rgb(176, 179, 184);
+}
+
+._Post_Background {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 480px;
+  border: 1px solid #fff;
+  border-radius: 0px;
+  background-color: #000;
+  border-bottom: 1px solid #fff;
+}
+
+._Post {
+  color: var(--post-text-color);
+  direction: ltr;
+  display: block;
+  padding-left: 12px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-right: 25px;
+  font-family: 'Segoe UI Historic', 'Segoe UI', Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14.6667px;
+  max-width: 100%;
+  min-width: 0;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  white-space: pre-wrap;
+  word-spacing: justify;
+  resize: none;
+}
+
+._Post:focus {
+  min-width: 0;
+    color: #000;
+    border: 0px !important;
+    outline: 0px solid #007bff; /* Change the color to match your design */
+    outline-offset: 0px; /* Adjust the offset as needed */
+}
+
+._Post:focus {
+    /*background: #0f0!important;*/
+    /* Add any other styles you want to apply */
+}
