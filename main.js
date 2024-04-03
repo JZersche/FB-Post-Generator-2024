@@ -265,8 +265,8 @@ _Post_Image1.appendChild(IMAGE);
 
 document.body.appendChild(_Wrapper);
 
-_Post.style.height = (_Post.scrollHeight-17) + 'px';
-console.log(_Post.scrollHeight);
+_Post.style.height = (_Post.scrollHeight) + 'px';
+console.log('1 Scrollheight '+_Post.scrollHeight);
 
 
 
@@ -393,7 +393,9 @@ ForeignObject_Wrapper.style.backgroundRepeat = "repeat"; // or 'repeat-x' for ho
 		console.log(_Post.value);
 console.log(_Post.scrollHeight);
 _Post.style.height = 0;
-_Post.style.height = (_Post.scrollHeight-17) + 'px';
+_Post.style.height = (_Post.scrollHeight) + 'px';
+console.log('2 Scrollheight '+_Post.scrollHeight);
+
 //canvasHeight = _Wrapper.offsetHeight + 1000; // Adjust this MF Bravo
 console.log('--B4--'+canvasHeight + ' and wrapper height' + _Wrapper.offsetHeight);
 canvasHeight = _Wrapper.offsetHeight + 550; // Adjust this MF Bravo
