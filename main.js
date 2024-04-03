@@ -108,8 +108,9 @@ The researchers, led by Lennart Van Hirtum, overcame the challenge of calculatin
 // // // // // // // // ForeignObject // // // // // // // //
 const ForeignObject_Wrapper = document.createElement("div");
 ForeignObject_Wrapper.className = "ForeignObject_Wrapper";
-ForeignObject_Wrapper.style.cssText = "border-radius: 0px; border: 1px solid #2e2; margin-top: 5px;";
+ForeignObject_Wrapper.style.cssText = "border-radius: 0px; border: 1px solid #2e2; margin-top: 0px;";
 //ForeignObject_Wrapper.style.height = 400 + 'px';
+////// ADJUST Alpha
 
 
 
@@ -264,19 +265,9 @@ _Post_Image1.appendChild(IMAGE);
 
 document.body.appendChild(_Wrapper);
 
-_Post.style.height = (_Post.scrollHeight-0) + 'px';
+_Post.style.height = (_Post.scrollHeight-17) + 'px';
 console.log(_Post.scrollHeight);
 
-  // Add an event listener to the textarea for input
-  _Post.addEventListener('input', function() {
-    // Update the content of the div with the textarea value
-    _Post.textContent = _Post.value;
-		console.log(_Post.value);
-console.log('scrollHeight is'+ _Post.scrollHeight);
-_Post.style.height = 0;
-_Post.style.height = (_Post.scrollHeight-0) + 'px';
-
-  });
 
 
 // Create a new button element
@@ -303,14 +294,14 @@ let canvasWidth = document.body.lastChild.getBoundingClientRect().width;
 let canvasHeight = document.querySelector('._Wrapper').offsetHeight - parseInt(ExportPNGButton.style.height);
 console.log('CHeight: '+document.querySelector('._Wrapper').offsetHeight);
 canvasWidth = canvasWidth;
-canvasHeight = canvasHeight + 42; // Adjust this MF
-
+canvasHeight = _Wrapper.offsetHeight + 1000; // Adjust this MF Bravo
+console.log('sfsfs '+_Wrapper.offsetHeight);
 canvas.height = canvasHeight;
 canvas.width = canvasWidth; // Set the canvas width to match the desired element width
 //_Wrapper.style.display = "none";
 //canvas.style.border = "0px solid #0f4";
 //canvas.style.borderRadius = "0px";
-canvas.style.background = "#faf";
+canvas.style.background = "transparent";
 canvas.className = "ExportCanvas";
 //ctx.fillStyle = "#f0f";
 ctx.fillRect(0, 0, canvas.width, canvas.height);
@@ -326,7 +317,7 @@ ctx.imageSmoothingEnabled = true;
 
 ctx.lineWidth = 1;
 ctx.beginPath();
-ctx.moveTo(0, canvas.height - 1);
+ctx.moveTo(0, canvas.height - 0);
 ctx.lineTo(canvas.width, canvas.height - 0);
 ctx.stroke();
 
@@ -369,9 +360,10 @@ _Wrapper.parentNode.insertBefore(ExportPNGButton, _Wrapper.nextSibling);
 
 //let heightAdjust = document.getElementsByClassName('ExportPostPNG')[0].offsetHeight;
 
-canvas.height = canvasHeight - 5;
+//canvas.height = canvasHeight - 0;
 console.log("HEIGHT IS "+_Wrapper.offsetHeight);
-_Wrapper.style.height = _Post.offsetHeight - 2.5 + 100 + "px";
+//_Wrapper.style.height = _Post.offsetHeight - 2.5 + 100 + "px";
+//_Wrapper.style.height = _Wrapper.offsetHeight + "px";
 ForeignObject_Wrapper.style.height = _Wrapper.style.height;
 //ForeignObject_Wrapper.setAttribute("style", "background-color: #2A5773; background-image: url('https://i.imgur.com/CnbEeEv.png'); background-size: 64px; background-repeat: repeat;");
 
@@ -394,6 +386,20 @@ ForeignObject_Wrapper.style.backgroundRepeat = "repeat"; // or 'repeat-x' for ho
 };
 
 
+  // Add an event listener to the textarea for input
+  _Post.addEventListener('input', function() {
+    // Update the content of the div with the textarea value
+    _Post.textContent = _Post.value;
+		console.log(_Post.value);
+console.log(_Post.scrollHeight);
+_Post.style.height = 0;
+_Post.style.height = (_Post.scrollHeight-17) + 'px';
+//canvasHeight = _Wrapper.offsetHeight + 1000; // Adjust this MF Bravo
+console.log('--B4--'+canvasHeight + ' and wrapper height' + _Wrapper.offsetHeight);
+canvasHeight = _Wrapper.offsetHeight + 550; // Adjust this MF Bravo
+console.log('--A5--'+canvasHeight + ' and wrapper height' + _Wrapper.offsetHeight);
+
+  });
 
 ExportPNGButton.style.background = "#0a6";
 ExportPNGButton.addEventListener("mousedown", function() {
@@ -409,7 +415,7 @@ ExportPNGButton.addEventListener("click", function() {
 
 
 ///// ATTENTION
-canvas.height = document.querySelector('._Wrapper').offsetHeight - parseInt(ExportPNGButton.style.height) + 50;
+canvas.height = document.querySelector('._Wrapper').offsetHeight;
 
 
 
@@ -425,7 +431,7 @@ console.log(canvasHeight);
   const img = new Image();
 img.crossOrigin = "anonymous"; // Request CORS-enabled usage of the image
   img.onload = function() {
-  ctx.drawImage(img, 0, -5); // adjust position of element in canvas as needed
+  ctx.drawImage(img, 0, 0); // adjust position of element in canvas as needed
   ctx.drawImage(backgroundImage, canvas.width/2.5 + 250, (canvas.height/2.5 - 118), 100,100);
 // LAST ADJUSTMENT 
   };
